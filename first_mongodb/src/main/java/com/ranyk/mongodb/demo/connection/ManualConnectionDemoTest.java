@@ -1,4 +1,4 @@
-package com.ranyk.mongodb.demo;
+package com.ranyk.mongodb.demo.connection;
 
 import com.mongodb.MongoClientSettings;
 import com.mongodb.ServerAddress;
@@ -9,14 +9,22 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
+/**
+ * ClassName:ManualConnectionDemoTest<br/>
+ * Description:手动连接MongoDB
+ *
+ * @author ranyi
+ * @date 2020-12-25 20:43
+ * Version: V1.0
+ */
 @Slf4j
-class FirstMongoDbApplicationTests {
+public class ManualConnectionDemoTest {
 
     /**
-     * MongoDB 连接单元测试
+     * 手动连接 MongoDB 测试方法
      */
     @Test
-    void mongoDBTest() {
+    public void manualContest() {
         //1. 获取连接客户端
         MongoClient mongoClient = MongoClients.create(
                 MongoClientSettings.builder().applyToClusterSettings(builder -> builder.hosts(Arrays.asList(new ServerAddress("localhost", 27017)))).build()
@@ -31,7 +39,11 @@ class FirstMongoDbApplicationTests {
         for (Document document : documents) {
             log.error(document.toJson());
         }
+    }
 
+    @Test
+    void testMethod0() {
+        log.error("单元测试....");
     }
 
 }
