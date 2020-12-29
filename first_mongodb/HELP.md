@@ -378,13 +378,10 @@ public class A {
 
     public void queryAllDocument() {
         MongoCursor<Document> cursor = collection.find().iterator();
-        try {
-            while (cursor.hasNext()){
-                log.error(cursor.next().toJson());
-            }
-        }finally {
-            cursor.close();
+        while (cursor.hasNext()){
+            log.error(cursor.next().toJson());
         }
+        cursor.close();
     }
 }
 ```
@@ -473,7 +470,7 @@ public class A {
 
     public void queryFirstByFilter() {
 
-        Block<Document> block = new Block<Document>() {
+        Block<Document> block = new Block<>() {
             /**
              * Apply some logic to the value.
              *
@@ -511,7 +508,7 @@ public class A {
 
     public void queryFirstByFilter() {
 
-        Block<Document> block = new Block<Document>() {
+        Block<Document> block = new Block<>() {
             /**
              * Apply some logic to the value.
              *

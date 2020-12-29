@@ -7,7 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.bson.Document;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
+import java.util.Collections;
 
 /**
  * ClassName:ManualConnectionDemoTest<br/>
@@ -27,7 +27,7 @@ public class ManualConnectionDemoTest {
     public void manualContest() {
         //1. 获取连接客户端
         MongoClient mongoClient = MongoClients.create(
-                MongoClientSettings.builder().applyToClusterSettings(builder -> builder.hosts(Arrays.asList(new ServerAddress("localhost", 27017)))).build()
+                MongoClientSettings.builder().applyToClusterSettings(builder -> builder.hosts(Collections.singletonList(new ServerAddress("localhost", 27017)))).build()
         );
         //2. 获得操作的数据库
         MongoDatabase test = mongoClient.getDatabase("test");
