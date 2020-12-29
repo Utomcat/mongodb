@@ -31,6 +31,8 @@ class FirstMongoDbApplicationTests {
         for (Document document : documents) {
             log.error(document.toJson());
         }
+        //6. 关闭连接,释放资源
+        mongoClient.close();
 
     }
 

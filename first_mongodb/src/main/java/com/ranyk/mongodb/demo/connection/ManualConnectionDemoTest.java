@@ -39,6 +39,8 @@ public class ManualConnectionDemoTest {
         for (Document document : documents) {
             log.error(document.toJson());
         }
+        //6. 释放本次使用的连接资源
+        mongoClient.close();
     }
 
     @Test
