@@ -524,7 +524,6 @@ public class A {
 }
 ```
 
-
 ### 9）、更新 `Document` 
 
 >   使用 `updateOne()` 和 `updateMany()` 方法,去更新集合中的 `documents` 
@@ -596,7 +595,6 @@ public class A {
     }
 }
 ```
-
 
 ### 10）、删除 `Document` 
 
@@ -670,7 +668,6 @@ public class A {
 }
 ```
 
-
 ### 11）、创建索引
 
 >   要在一个或多个字段上创建索引,则需要将索引所规范的 `document` 对象传递给 `createIndex()` 方法.
@@ -712,5 +709,5 @@ public class A {
 
 ### 12）、附加信息
 
-> 有关在 `Pojo` 中使用 `MongoDB` 的其他教程, 参见 [`Pojos Quick Start`](https://mongodb.github.io/mongo-java-driver/4.2/driver/getting-started/quick-start-pojo/)
+> 有关在 `Pojo` 中使用 `MongoDB` 的其他教程, 参见 [`Pojos Quick Start`](https://mongodb.github.io/mongo-java-driver/4.2/driver/getting-started/quick-start-pojo/) <br/>
 > 对于其他教程(比如: 聚合框架、指定写入连接...等),参见 [`Java Driver Tutorials`](https://mongodb.github.io/mongo-java-driver/4.2/driver/tutorials/)
